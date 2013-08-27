@@ -59,19 +59,33 @@ On the command line, launch R by typing
 Then call the plotDeBoer.R file, this will allow you to run functions from 
 plotDeBoer.R  
 
-	source('/Users/me/deBoerVowels/plotDeBoer.R')
+	> source('/Users/me/deBoerVowels/plotDeBoer.R')
 
 Now load the .csv file created by the deboer.py program and assign it to a variable
 
-	> x <- loadDataFile('/Users/me/Desktop/sample.csv')
+	> x <- loadDataFile('sample.csv')
 
 You can now use the functions outlined in plotDeBoer.R to illustrate the data 
-in the .csv file.  Here are four examples of how you might choose to implement 
-these functions
+in the .csv file.  
+
+------------------------------
+
+Here are four examples of how you might choose to implement 
+these functions (start at the command line):
 
 ------------------------------
 
 1. emergence of a vowel system (as seen in deboer 2000 figure 4)
+
+Run a simulation with 20 agents for 10,000 imitation games, keeping the results of every 20 games
+
+	$ python deboer.py --nAgents 20 --nIts 10000 --storeIvl 20 runs/nAgents20_nIts10000_storeIvl20.csv
+
+then:
+
+	$ R
+	> source('/Users/me/deBoerVowels/plotDeBoer.R')
+	> x <- loadDataFile('nAgents20_nIts10000_storeIvl20.csv')
 
 Use invPlotAllAgents to plot the vowel inventories different points in time (
 default is every 100 interactions)
@@ -118,9 +132,19 @@ apply a limiter on the y axis of the plot (Note: this will produce a warning)
 
 2. plot the average success, size and energy over runs (instead of agents)
 
-First load a .csv file containing data from multiple runs 
+Run a simulation with multiple runs: 500 runs, 20 agents, 5000 interactions (with only 
+the last one stored): 
 
-	> xRuns <- loadDataFile('sample_nRuns500.csv')
+	$ python deboer.py --nAgents 20 --nIts 5000 --storeIvl 5000 --nRuns 500 runs/nAgents20_nIts5000_storeIvl5000_nRuns1000.csv
+
+then:
+
+	$ R
+	> source('/Users/me/deBoerVowels/plotDeBoer.R')
+	
+Load the .csv file containing data from multiple runs 
+
+	> xRuns <- loadDataFile('nAgents20_nIts5000_storeIvl5000_nRuns1000.csv')
 
 Then create run summary data for this file (like agentTimeSummary but over runs
 instead of agents).
@@ -135,15 +159,23 @@ height
 	> plotSize(ats)
 	> plotEnergy(ats)
 
-	#### WARNING MESSAGE ABOUT binwidth AND position_stack####
-
 -------------------------------
 
 3. exploring the effects of added noise
 
-First load a .csv file containing data with adjusted noise
+Run a simulation increasing the noise from 0.1 to 0.25 (otherwise similar to the first
+example):
 
-	> y <- loadDataFile('sample_noise25.csv')
+	$ python deboer.py --nAgents 20 --noise 0.25 --nIts 10000 --storeIvl 100 runs/nAgents20_noise25_nIts10000_storeIvl100.csv
+
+then:
+
+	$ R
+	> source('/Users/me/deBoerVowels/plotDeBoer.R')	
+
+Load the .csv file containing data with adjusted noise
+
+	> y <- loadDataFile('nAgents20_noise25_nIts10000_storeIvl100.csv')
 
 Then you can plot the inventories to see the effects of added noise
 
@@ -161,8 +193,17 @@ supress the legend)
 
 4. exploring the effect of increased population size
 
-First load a .csv file containing data with adjusted population size (200 agents
-for example)
+Run a simulation increasing the population from 20 to 200 (otherwise similar to the first
+example):
+
+	$ python deboer.py --nAgents 200 --nIts 10000 --storeIvl 100 runs/nAgents200_nIts10000_storeIvl100.csv
+
+then:
+
+	$ R
+	> source('/Users/me/deBoerVowels/plotDeBoer.R')	
+
+Load the .csv file containing data with adjusted population size
 
 	> z <- loadDataFile('sample_nAgents200.csv')
 
