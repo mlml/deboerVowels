@@ -19,7 +19,7 @@ and follow the instructions on the site.
 
 Author:  Morgan Sonderegger and Misha Schwartz, 7/2013
 
-This code was developed for the "Computational Models of Sound Change" MS co-taught with [James Kirby](http://www.lel.ed.ac.uk/~jkirby/) at the [2013 LSA Institute](http://lsa2013.lsa.umich.edu/).
+This code was developed for the course "Computational Models of Sound Change" co-taught by [James Kirby](http://www.lel.ed.ac.uk/~jkirby/) and MS at the [2013 LSA Institute](http://lsa2013.lsa.umich.edu/).
 
 ---------------------------------------------------------------------------------------
 
