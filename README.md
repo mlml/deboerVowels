@@ -3,9 +3,9 @@ deboerVowels
 
 Description: 
 
-Vowel system simulation based on 'Self Organization in Vowel Systems' (deBoer 2000)
-with some small changes from two sources: deBoer's book of the same title (1999) 
-and Java implementation by Julian Bradfield (Edinburgh).
+Vowel system simulation based on ['Self Organization in Vowel Systems'](http://ai.vub.ac.be/~bart/papers/deBoerJOP2000.pdf) (deBoer 2000)
+with some small changes from two sources: deBoer's 1999 [book](http://ukcatalogue.oup.com/product/9780198299653.do)
+and Java implementation by [Julian Bradfield](http://homepages.inf.ed.ac.uk/jcb/).
 
 Requirements: 
 
@@ -17,7 +17,9 @@ a computer with python and R environments. If you don't have them...
 and follow the instructions on the site.
 
 
-Author:  Morgan, 7/2013
+Author:  Morgan Sonderegger, 7/2013
+
+This code was developed for the "Computational Models of Sound Change" course I co-taught with [James Kirby](http://www.lel.ed.ac.uk/~jkirby/) at the [2013 LSA Institute](http://lsa2013.lsa.umich.edu/).
 
 ---------------------------------------------------------------------------------------
 
