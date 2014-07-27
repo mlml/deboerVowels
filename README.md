@@ -3,7 +3,7 @@ deboerVowels
 
 Description: 
 
-Vowel system simulation based on ['Self Organization in Vowel Systems'](http://ai.vub.ac.be/~bart/papers/deBoerJOP2000.pdf) (deBoer 2000)
+Vowel system simulation based on ['Self Organization in Vowel Systems'](http://ai.vub.ac.be/~bart/papers/deBoerJOP2000.pdf) ([deBoer](http://www.uva.nl/over-de-uva/organisatie/medewerkers/content/b/o/b.g.deboer/b.g.de-boer.html) 2000)
 with some small changes from two sources: deBoer's 1999 [book](http://ukcatalogue.oup.com/product/9780198299653.do)
 and Java implementation by [Julian Bradfield](http://homepages.inf.ed.ac.uk/jcb/).
 
